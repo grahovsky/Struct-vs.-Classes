@@ -8,5 +8,21 @@
 
 import Foundation
 
-print("Hello, World!")
+//let hero = ClassHero(name: "Iron Man", universe: "Marvel")
+let hero = StructHero(name: "Iron Man", universe: "Marvel")
+
+//hero.name = "Cat Woman"// error for let Struct
+
+var anotherMarvelHero = hero
+anotherMarvelHero.name = "The Hulk"
+
+var avengers = [hero, anotherMarvelHero]
+
+avengers[0].name = "Thor"
+
+
+print("hero name = \(hero.name)")
+print("anotherMarvelHero name = \(anotherMarvelHero.name)")
+print("first avenger name = \(avengers[0].name)")
+
 
